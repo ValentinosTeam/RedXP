@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <OutputType>Library</OutputType>
+
+        <LangVersion>12.0</LangVersion>
+        <Platforms>AnyCPU</Platforms>
+        <Nullable>disable</Nullable>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
+        <AssemblyName>RedXP</AssemblyName>
+        <RootNamespace>RedXP</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="Assembly-CSharp" HintPath="../deps/Assembly-CSharp.dll" />
+      <Reference Include="LabApi" HintPath="../deps/LabApi.dll" />
+      <Reference Include="CommandSystem.Core" HintPath="../deps/CommandSystem.Core.dll" />
+      <Reference Include="UnityEngine.CoreModule" HintPath="../deps/UnityEngine.CoreModule.dll" />
+      <Reference Include="Mirror" HintPath="../deps/Mirror.dll" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MySqlConnector" Version="2.4.0" />
+    </ItemGroup>
+</Project>
