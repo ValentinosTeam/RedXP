@@ -33,7 +33,7 @@ public class XPGainEvents {
   public static void AddXPAndNotify(Player player, int amount, string eventMessage) {
     XPDataStore xpStore = XPDataStore.Get(player);
     xpStore.AddXP(amount);
-    xpStore.LastXPGainEvent = eventMessage;
+    xpStore.XPData.LastXPGainEvent = eventMessage;
 
     if (!ServerSpecificSettings.IsXPGainHintsDisplayEnabled(player)) return;
 

@@ -41,7 +41,8 @@ public class SetXPCommand : ICommand {
 
   private bool setOnline(Player player, int amount, out string response) {
     XPDataStore xpStore = XPDataStore.Get(player);
-    xpStore.XP = amount;
+    XPUserData xpData = XPUserData.Get(player);
+    xpData.XP = amount;
     xpStore.UpdateDisplayName();
 
     response = translations.SetXPSuccessOnline_Msg;
@@ -49,13 +50,11 @@ public class SetXPCommand : ICommand {
   }
 
   private bool setOffline(string userId, int amount, out string response) {
-    if (database.SetXPOffline(userId, amount))
-      response = translations.SetXPSuccessOffline_Msg;
-    else {
-      response = translations.SetXPFailureOffline_Msg;
-      return false;
-    }
+    XPUserData xpData = XPUserData.GetOffline(userId);
+    xpData.XP = amount;
+    xpData.SaveToDB();
 
+    response = translations.SetXPSuccessOffline_Msg;
     return true;
   }
 }

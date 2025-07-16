@@ -18,7 +18,8 @@ public class SeeXPCommandClient : ICommand {
       return false;
     }
 
-    response = CommandUtils.GenerateSummaryOnline(player);
+    response = CommandUtils.GenerateSummary(XPUserData.Get(player));
+
     return true;
   }
 }

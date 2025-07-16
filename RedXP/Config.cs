@@ -4,6 +4,8 @@ public class Config {
   public float XPGainHintDuration { get; set; } = 1.5f;
   public string LevelFormula { get; set; } = "1 + 0.1*x";
 
+  public int Leaderboard_N { get; set; } = 10;
+
   public string MySql_ConnectionString { get; set; } = "server=127.0.0.1;port=3306;uid=root;pwd=testpw;database=redxp";
 
   public int KillHumanAsHuman_XP { get; set; } = 5;

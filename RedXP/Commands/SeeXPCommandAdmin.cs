@@ -1,5 +1,4 @@
 using CommandSystem;
-using LabApi.Features.Wrappers;
 using System;
 
 namespace RedXP.Commands;
@@ -19,13 +18,12 @@ public class SeeXPCommandAdmin : ICommand {
       return false;
     }
 
-    if (Player.TryGet(args.At(0), out Player player)) {
-      response = CommandUtils.GenerateSummaryOnline(player);
-    } else {
-      // TODO: fetch from DB here
-      response = "WIP";
+    if (!XPUserData.TryGet(args.At(0), out XPUserData xpData)) {
+      response = "Player not found.";
+      return false;
     }
     
+    response = CommandUtils.GenerateSummary(xpData);
     return true;
   }
 }

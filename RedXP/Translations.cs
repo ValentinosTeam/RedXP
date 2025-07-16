@@ -12,6 +12,9 @@ public class Translations {
   public string LevelHidden_Msg { get; set; } = "Your level is now hidden.";
   public string LevelVisible_Msg { get; set; } = "Your level is now visible.";
 
+  public string LeaderboardHeader { get; set; } = "\nLEADERBOARD";
+  public string LeaderboardEntryTemplate { get; set; } = "LVL {0:D3} | {1}";
+
   public string SSSettings_DisplayLevel_Msg = "Show level alongside nickname";
   public string SSSettings_ShowXPGainHints_Msg = "Show XP gain hints";
   public string SSSettings_Enabled = "Enabled";

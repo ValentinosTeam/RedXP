@@ -10,10 +10,14 @@ class XPDataStoreEventHandler : CustomEventsHandler {
   // (as the user id is not available in OnInstanceCreated
   // of XPDataStore) and update display name
   public override void OnPlayerJoined(PlayerJoinedEventArgs ev) {
+    if (ev.Player.DoNotTrack || !database.Available) return;
+    
     XPDataStore xpStore = XPDataStore.Get(ev.Player);
 
-    if (!ev.Player.DoNotTrack && database.Available)
-      database.FetchPlayer(xpStore);
+    xpStore.XPData = XPUserData.GetOffline(ev.Player.UserId);
+    if (xpStore.XPData == null) xpStore.XPData = XPUserData.New(ev.Player);
+    
+    xpStore.XPData.Online = true;
 
     xpStore.UpdateDisplayName();
   }
