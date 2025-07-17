@@ -17,5 +17,9 @@ public class DamageEventHandler : CustomEventsHandler {
         || ev.DamageHandler is DisruptorDamageHandler) {
       XPGainEvents.AddXPAndNotify(ev.Attacker, config.DamageSpecialWeapon_XP, translations.DamageSpecialWeapon_Msg);
     }
+    // SCP-018 damage
+    else if (ev.DamageHandler is Scp018DamageHandler) {
+      XPGainEvents.AddXPAndNotify(ev.Attacker, config.DamageSCP018_XP, translations.DamageSCP018_Msg);
+    }
   }
 }
