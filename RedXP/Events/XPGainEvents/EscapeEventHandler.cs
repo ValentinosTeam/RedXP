@@ -8,6 +8,7 @@ public class EscapeEventHandler : CustomEventsHandler {
   private static Translations translations => RedXP.Instance.Translations;
 
   public override void OnPlayerEscaped(PlayerEscapedEventArgs ev) {
+    // escaping the facility
     XPGainEvents.AddXPAndNotify(ev.Player, config.Escape_XP, translations.Escape_Msg);
   }
 }

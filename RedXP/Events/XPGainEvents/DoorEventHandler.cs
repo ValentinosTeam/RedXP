@@ -15,6 +15,7 @@ public class DoorEventHandler: CustomEventsHandler {
   };
 
   public override void OnPlayerInteractedDoor(PlayerInteractedDoorEventArgs ev) {
+    // opening a gate for the first time
     if (!gatesOpened.ContainsKey(ev.Door.DoorName)) return;
     if (gatesOpened[ev.Door.DoorName]) return;
 

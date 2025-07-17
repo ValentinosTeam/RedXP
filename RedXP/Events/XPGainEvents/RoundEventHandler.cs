@@ -14,11 +14,14 @@ public class RoundEventHandler : CustomEventsHandler {
   private List<Player> roundStartPlayerList;
 
   public override void OnServerRoundStarted() {
+    // round presence
     handleRoundPresenceStart();
   }
 
   public override void OnServerRoundEnded(RoundEndedEventArgs ev) {
+    // SCP win
     handleSCPWin(ev);
+    // round presence
     handleRoundPresenceEnd(ev);
   }
 

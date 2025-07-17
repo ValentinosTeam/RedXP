@@ -8,6 +8,7 @@ public class WarheadEventHandler : CustomEventsHandler {
   private static Translations translations => RedXP.Instance.Translations;
 
   public override void OnWarheadStarted(WarheadStartedEventArgs ev) {
+    // activating the warhead on surface
     if (ev.Player == null) return;
 
     XPGainEvents.AddXPAndNotify(ev.Player, config.WarheadStarted_XP, translations.WarheadStarted_Msg);

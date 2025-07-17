@@ -11,6 +11,7 @@ public class DamageEventHandler : CustomEventsHandler {
   public override void OnPlayerHurt(PlayerHurtEventArgs ev) {
     if (ev.Attacker == null || ev.Attacker == ev.Player) return;
 
+    // special weapon damage
     // TODO: handle the microhid (handle bursts as single damage events)
     if (ev.DamageHandler is JailbirdDamageHandler
         || ev.DamageHandler is DisruptorDamageHandler) {

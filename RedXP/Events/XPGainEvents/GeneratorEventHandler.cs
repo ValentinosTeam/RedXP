@@ -12,6 +12,7 @@ public class GeneratorEventHandler : CustomEventsHandler {
   private List<Generator> generatorsClaimed = new();
 
   public override void OnPlayerActivatedGenerator(PlayerActivatedGeneratorEventArgs ev) {
+    // activating a generator
     if (generatorsClaimed.Contains(ev.Generator)) return;
 
     generatorsClaimed.Add(ev.Generator);
