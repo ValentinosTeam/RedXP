@@ -1,6 +1,7 @@
 using LabApi.Features.Wrappers;
 using LabApi.Events.CustomHandlers;
 using System;
+using LabApi.Features.Console;
 
 namespace RedXP.Events.XPGainEvents;
 
@@ -31,6 +32,14 @@ public class XPGainEvents {
   }
   
   public static void AddXPAndNotify(Player player, int amount, string eventMessage) {
+    if (player.IsDummy) {
+      Logger.Info(
+          String.Format("Skipping addition of {0} XP for dummy {1} ({2})",
+            amount, player.Nickname, eventMessage)
+      );
+      return;
+    }
+    
     XPDataStore xpStore = XPDataStore.Get(player);
     xpStore.AddXP(amount);
     xpStore.XPData.LastXPGainEvent = eventMessage;
