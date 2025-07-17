@@ -15,6 +15,7 @@ public class XPGainEvents {
   private GeneratorEventHandler generatorHandler = new();
   private WarheadEventHandler warheadHandler = new();
   private DamageEventHandler damageHandler = new();
+  private RoundEndEventHandler roundEndHandler = new();
 
   public void Register() {
     CustomHandlersManager.RegisterEventsHandler(killHandler);
@@ -23,6 +24,7 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(generatorHandler);
     CustomHandlersManager.RegisterEventsHandler(warheadHandler);
     CustomHandlersManager.RegisterEventsHandler(damageHandler);
+    CustomHandlersManager.RegisterEventsHandler(roundEndHandler);
   }
 
   public void Unregister() {
@@ -32,6 +34,7 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(generatorHandler);
     CustomHandlersManager.UnregisterEventsHandler(warheadHandler);
     CustomHandlersManager.UnregisterEventsHandler(damageHandler);
+    CustomHandlersManager.UnregisterEventsHandler(roundEndHandler);
   }
   
   public static void AddXPAndNotify(Player player, int amount, string eventMessage) {

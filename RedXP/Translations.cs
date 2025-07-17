@@ -35,6 +35,7 @@ public class Translations {
   public string KillHumanAsScp_Msg { get; set; } = "Killed a human as an SCP";
   public string KillScpAsHuman_Msg { get; set; } = "Killed an SCP as a human";
   public string DamageSpecialWeapon_Msg { get; set; } = "Damaged somebody with a special weapon";
+  public string SCPWin_Msg { get; set; } = "Won as the SCP team";
   public string Escape_Msg { get; set; } = "Escaped the facility";
   public string SCP079LevelUp_Msg { get; set; } = "Leveled up as SCP-079";
   public string ActivateUniqueGenerator_Msg { get; set; } = "Activated a generator for the first time";
