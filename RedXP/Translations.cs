@@ -22,6 +22,7 @@ public class Translations {
 
   public string PermissionError_Msg { get; set; } = "No permission.";
   public string NotAPlayerError_Msg { get; set; } = "You are not a player.";
+  public string PlayerNotFoundError_Msg { get; set; } = "Player not found.";
   public string InvalidUsageError_Msg { get; set; } = "Invalid usage.";
   public string ParsingError_Msg { get; set; } = "Parsing error.";
   public string SeeXPAdminUsage_Msg { get; set; } = "Usage: seexp {id}";

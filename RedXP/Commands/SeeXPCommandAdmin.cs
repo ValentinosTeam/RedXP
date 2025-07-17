@@ -19,7 +19,7 @@ public class SeeXPCommandAdmin : ICommand {
     }
 
     if (!XPUserData.TryGet(args.At(0), out XPUserData xpData)) {
-      response = "Player not found.";
+      response = translations.PlayerNotFoundError_Msg;
       return false;
     }
     

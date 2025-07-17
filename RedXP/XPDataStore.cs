@@ -29,15 +29,9 @@ public class XPDataStore : CustomDataStore<XPDataStore> {
         displayLevel, Owner.Nickname);
   }
 
-  protected override void OnInstanceCreated() {
-    // ideally we would fetch player data from the db here
-    // but the user id is not available at this stage
-  }
-
   protected override void OnInstanceDestroyed() {
     if (Owner.DoNotTrack || !database.Available) return;
 
-    // only save to the db if the fetch was successful
     XPData.SaveToDB();
   }
 
