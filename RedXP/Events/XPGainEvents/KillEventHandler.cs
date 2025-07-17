@@ -1,6 +1,7 @@
 using LabApi.Events.CustomHandlers;
 using LabApi.Events.Arguments.PlayerEvents;
 using PlayerRoles;
+using PlayerStatsSystem;
 
 namespace RedXP.Events.XPGainEvents;
 
@@ -19,5 +20,12 @@ public class KillEventHandler : CustomEventsHandler {
       XPGainEvents.AddXPAndNotify(ev.Attacker, config.KillHumanAsScp_XP, translations.KillHumanAsScp_Msg);
     else if (ev.Attacker.IsHuman && ev.Player.IsSCP)
       XPGainEvents.AddXPAndNotify(ev.Attacker, config.KillScpAsHuman_XP, translations.KillScpAsHuman_Msg);
+
+    if (ev.DamageHandler is ExplosionDamageHandler explosionDamageHandler
+        && (explosionDamageHandler.ExplosionType == ExplosionType.PinkCandy
+        || explosionDamageHandler.ExplosionType == ExplosionType.Cola
+        || explosionDamageHandler.ExplosionType == ExplosionType.Jailbird)) {
+      XPGainEvents.AddXPAndNotify(ev.Attacker, config.SuicideKill_XP, translations.SuicideKill_Msg);
+    }
   }
 }

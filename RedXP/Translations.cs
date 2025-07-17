@@ -35,6 +35,7 @@ public class Translations {
   public string KillHumanAsScp_Msg { get; set; } = "Killed a human as an SCP";
   public string KillScpAsHuman_Msg { get; set; } = "Killed an SCP as a human";
   public string KillHumanAsZombie_Msg { get; set; } = "Killed a human as a zombie";
+  public string SuicideKill_Msg { get; set; } = "Killed somebody with a suicide explosion";
   public string DamageSpecialWeapon_Msg { get; set; } = "Damaged somebody with a special weapon";
   public string RoundPresence_Msg { get; set; } = "Present at round start and end";
   public string SCPWin_Msg { get; set; } = "Won as the SCP team";
