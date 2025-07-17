@@ -50,7 +50,11 @@ public class SetXPCommand : ICommand {
   }
 
   private bool setOffline(string userId, int amount, out string response) {
-    XPUserData xpData = XPUserData.GetOffline(userId);
+    if (!XPUserData.TryGet(userId, out XPUserData xpData)) {
+      response = translations.PlayerNotFoundError_Msg;
+      return false;
+    }
+
     xpData.XP = amount;
     xpData.SaveToDB();
 
