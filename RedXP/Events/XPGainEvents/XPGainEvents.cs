@@ -18,6 +18,7 @@ public class XPGainEvents {
   private RoundEventHandler roundHandler = new();
   private SCP049EventHandler scp049Handler = new();
   private DoorEventHandler doorHandler = new();
+  private CuffEventHandler cuffHandler = new();
 
   public void Register() {
     CustomHandlersManager.RegisterEventsHandler(killHandler);
@@ -29,6 +30,7 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(roundHandler);
     CustomHandlersManager.RegisterEventsHandler(scp049Handler);
     CustomHandlersManager.RegisterEventsHandler(doorHandler);
+    CustomHandlersManager.RegisterEventsHandler(cuffHandler);
   }
 
   public void Unregister() {
@@ -41,6 +43,7 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(roundHandler);
     CustomHandlersManager.UnregisterEventsHandler(scp049Handler);
     CustomHandlersManager.UnregisterEventsHandler(doorHandler);
+    CustomHandlersManager.UnregisterEventsHandler(cuffHandler);
   }
   
   public static void AddXPAndNotify(Player player, int amount, string eventMessage) {

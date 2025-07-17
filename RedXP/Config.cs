@@ -15,6 +15,7 @@ public class Config {
   public int SuicideKill_XP { get; set; } = 10;
   public int DamageSpecialWeapon_XP { get; set; } = 5;
   public int DamageSCP018_XP { get; set; } = 5;
+  public int Cuffed_XP { get; set; } = 7;
   public int RoundPresence_XP { get; set; } = 3;
   public int SCPWin_XP { get; set; } = 10;
   public int SCPWinZombies_XP { get; set; } = 5;
