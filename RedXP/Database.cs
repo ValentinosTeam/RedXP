@@ -38,7 +38,7 @@ last_xp_gain_event VARCHAR(255) NOT NULL
   }
 
   public void SavePlayers() {
-    foreach (Player player in Player.List) {
+    foreach (Player player in Player.ReadyList) {
       if (!XPUserData.TryGet(player, out XPUserData xpData))
         continue;
 

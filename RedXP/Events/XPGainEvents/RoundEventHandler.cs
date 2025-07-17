@@ -25,7 +25,7 @@ public class RoundEventHandler : CustomEventsHandler {
   private void handleSCPWin(RoundEndedEventArgs ev) { 
     if (ev.LeadingTeam != RoundSummary.LeadingTeam.Anomalies) return;
 
-    foreach (Player player in Player.List.Where(p => p.IsSCP)) {
+    foreach (Player player in Player.ReadyList.Where(p => p.IsSCP)) {
       int xp = config.SCPWin_XP;
       if (player.Role == RoleTypeId.Scp0492) xp = config.SCPWinZombies_XP;
 
@@ -34,12 +34,12 @@ public class RoundEventHandler : CustomEventsHandler {
   }
   
   private void handleRoundPresenceStart() {
-    roundStartPlayerList = Player.List.ToList();
+    roundStartPlayerList = Player.ReadyList.ToList();
   }
 
   private void handleRoundPresenceEnd(RoundEndedEventArgs ev) {
     List<Player> presentStartAndEnd =
-      Player.List.ToList().Intersect(roundStartPlayerList).ToList();
+      Player.ReadyList.ToList().Intersect(roundStartPlayerList).ToList();
 
     foreach (Player player in presentStartAndEnd) {
       XPGainEvents.AddXPAndNotify(player, config.RoundPresence_XP, translations.RoundPresence_Msg);
