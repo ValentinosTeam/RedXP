@@ -12,16 +12,16 @@ public class XPGainEvents {
   private KillEventHandler killHandler = new();
   private EscapeEventHandler escapeHandler = new();
   private SCP079LevelUpEventHandler scp079LevelUpHandler = new();
-  private GeneratorEventHandler generatorEventHandler = new();
-  private WarheadEventHandler warheadEventHandler = new();
+  private GeneratorEventHandler generatorHandler = new();
+  private WarheadEventHandler warheadHandler = new();
   private DamageEventHandler damageHandler = new();
 
   public void Register() {
     CustomHandlersManager.RegisterEventsHandler(killHandler);
     CustomHandlersManager.RegisterEventsHandler(escapeHandler);
     CustomHandlersManager.RegisterEventsHandler(scp079LevelUpHandler);
-    CustomHandlersManager.RegisterEventsHandler(generatorEventHandler);
-    CustomHandlersManager.RegisterEventsHandler(warheadEventHandler);
+    CustomHandlersManager.RegisterEventsHandler(generatorHandler);
+    CustomHandlersManager.RegisterEventsHandler(warheadHandler);
     CustomHandlersManager.RegisterEventsHandler(damageHandler);
   }
 
@@ -29,8 +29,8 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(killHandler);
     CustomHandlersManager.UnregisterEventsHandler(escapeHandler);
     CustomHandlersManager.UnregisterEventsHandler(scp079LevelUpHandler);
-    CustomHandlersManager.UnregisterEventsHandler(generatorEventHandler);
-    CustomHandlersManager.UnregisterEventsHandler(warheadEventHandler);
+    CustomHandlersManager.UnregisterEventsHandler(generatorHandler);
+    CustomHandlersManager.UnregisterEventsHandler(warheadHandler);
     CustomHandlersManager.UnregisterEventsHandler(damageHandler);
   }
   
