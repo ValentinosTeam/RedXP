@@ -15,7 +15,7 @@ public class XPGainEvents {
   private GeneratorEventHandler generatorHandler = new();
   private WarheadEventHandler warheadHandler = new();
   private DamageEventHandler damageHandler = new();
-  private RoundEndEventHandler roundEndHandler = new();
+  private RoundEventHandler roundHandler = new();
   private SCP049EventHandler scp049Handler = new();
   private DoorEventHandler doorHandler = new();
 
@@ -26,7 +26,7 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(generatorHandler);
     CustomHandlersManager.RegisterEventsHandler(warheadHandler);
     CustomHandlersManager.RegisterEventsHandler(damageHandler);
-    CustomHandlersManager.RegisterEventsHandler(roundEndHandler);
+    CustomHandlersManager.RegisterEventsHandler(roundHandler);
     CustomHandlersManager.RegisterEventsHandler(scp049Handler);
     CustomHandlersManager.RegisterEventsHandler(doorHandler);
   }
@@ -38,7 +38,7 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(generatorHandler);
     CustomHandlersManager.UnregisterEventsHandler(warheadHandler);
     CustomHandlersManager.UnregisterEventsHandler(damageHandler);
-    CustomHandlersManager.UnregisterEventsHandler(roundEndHandler);
+    CustomHandlersManager.UnregisterEventsHandler(roundHandler);
     CustomHandlersManager.UnregisterEventsHandler(scp049Handler);
     CustomHandlersManager.UnregisterEventsHandler(doorHandler);
   }

@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace RedXP.Events.XPGainEvents;
 
-public class RoundEndEventHandler : CustomEventsHandler {
+public class RoundEventHandler : CustomEventsHandler {
   private static Config config => RedXP.Instance.Config;
   private static Translations translations => RedXP.Instance.Translations;
 
