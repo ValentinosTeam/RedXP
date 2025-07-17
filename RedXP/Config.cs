@@ -14,6 +14,7 @@ public class Config {
   public int DamageSpecialWeapon_XP { get; set; } = 5;
   public int SCPWin_XP { get; set; } = 10;
   public int SCPWinZombies_XP { get; set; } = 5;
+  public int SCP049CreateZombie_XP { get; set; } = 2;
   public int Escape_XP { get; set; } = 10;
   public int SCP079LevelUp_XP { get; set; } = 7;
   public int ActivateUniqueGenerator_XP { get; set; } = 3;
