@@ -31,8 +31,9 @@ public class XPDataStore : CustomDataStore<XPDataStore> {
 
   protected override void OnInstanceDestroyed() {
     if (Owner.DoNotTrack || !database.Available) return;
-
-    XPData.SaveToDB();
+    
+    if (XPData != null)
+      XPData.SaveToDB();
   }
 
   public void AddXP(int amount) {
