@@ -9,7 +9,12 @@ public class XPGainEvents {
   private static Config config => RedXP.Instance.Config;
   private static Translations translations => RedXP.Instance.Translations;
 
-  private KillEventHandler killHandler = new();
+  private KillHumanAsHumanHandler killHHHandler = new();
+  private KillHumanAsSCPHandler killHSHandler = new();
+  private KillSCPAsHumanHandler killSHHandler = new();
+  private KillHumanAsZombieHandler killHZHandler = new();
+  private KillSuicideExplosionHandler killSEHandler = new();
+
   private EscapeEventHandler escapeHandler = new();
   private SCP079LevelUpEventHandler scp079LevelUpHandler = new();
   private GeneratorEventHandler generatorHandler = new();
@@ -21,7 +26,12 @@ public class XPGainEvents {
   private CuffEventHandler cuffHandler = new();
 
   public void Register() {
-    CustomHandlersManager.RegisterEventsHandler(killHandler);
+    CustomHandlersManager.RegisterEventsHandler(killHHHandler);
+    CustomHandlersManager.RegisterEventsHandler(killHSHandler);
+    CustomHandlersManager.RegisterEventsHandler(killSHHandler);
+    CustomHandlersManager.RegisterEventsHandler(killHZHandler);
+    CustomHandlersManager.RegisterEventsHandler(killSEHandler);
+
     CustomHandlersManager.RegisterEventsHandler(escapeHandler);
     CustomHandlersManager.RegisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.RegisterEventsHandler(generatorHandler);
@@ -34,7 +44,12 @@ public class XPGainEvents {
   }
 
   public void Unregister() {
-    CustomHandlersManager.UnregisterEventsHandler(killHandler);
+    CustomHandlersManager.UnregisterEventsHandler(killHHHandler);
+    CustomHandlersManager.UnregisterEventsHandler(killHSHandler);
+    CustomHandlersManager.UnregisterEventsHandler(killSHHandler);
+    CustomHandlersManager.UnregisterEventsHandler(killHZHandler);
+    CustomHandlersManager.UnregisterEventsHandler(killSEHandler);
+    
     CustomHandlersManager.UnregisterEventsHandler(escapeHandler);
     CustomHandlersManager.UnregisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.UnregisterEventsHandler(generatorHandler);
