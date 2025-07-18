@@ -8,6 +8,7 @@ using LabApi.Features.Console;
 using RedXP.Events;
 using RedXP.Events.XPGainEvents;
 using MySqlConnector;
+using HarmonyLib;
 
 namespace RedXP;
 
@@ -24,9 +25,12 @@ internal class RedXP : Plugin<Config> {
   public Database Database { get; private set; }
   private XPGainEvents xpGainEvents = new();
   private XPDataStoreEventHandler xpStoreEventHandler = new();
+  private Harmony Harmony = new("gg.valentinos.redxp");
 
   public override void Enable() {
     Instance = this;
+
+    Harmony.PatchAll();
 
     if (Config == null)
       throw new ArgumentNullException("Config");
