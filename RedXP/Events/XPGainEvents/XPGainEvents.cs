@@ -21,10 +21,12 @@ public class XPGainEvents {
   private EscapeHandler escapeHandler = new();
   private EscapeAssistHandler escapeAssistHandler = new();
 
+  private RoundPresenceHandler roundPresenceHandler = new();
+  private SCPWinHandler SCPWinHandler = new();
+
   private SCP079LevelUpHandler scp079LevelUpHandler = new();
   private GeneratorActivationHandler generatorActivationHandler = new();
   private WarheadActivationHandler warheadActivationHandler = new();
-  private RoundEventHandler roundHandler = new();
   private SCP049EventHandler scp049Handler = new();
   private DoorEventHandler doorHandler = new();
   private CuffEventHandler cuffHandler = new();
@@ -42,10 +44,12 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(escapeHandler);
     CustomHandlersManager.RegisterEventsHandler(escapeAssistHandler);
 
+    CustomHandlersManager.RegisterEventsHandler(roundPresenceHandler);
+    CustomHandlersManager.RegisterEventsHandler(SCPWinHandler);
+
     CustomHandlersManager.RegisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.RegisterEventsHandler(generatorActivationHandler);
     CustomHandlersManager.RegisterEventsHandler(warheadActivationHandler);
-    CustomHandlersManager.RegisterEventsHandler(roundHandler);
     CustomHandlersManager.RegisterEventsHandler(scp049Handler);
     CustomHandlersManager.RegisterEventsHandler(doorHandler);
     CustomHandlersManager.RegisterEventsHandler(cuffHandler);
@@ -63,11 +67,13 @@ public class XPGainEvents {
 
     CustomHandlersManager.UnregisterEventsHandler(escapeHandler);
     CustomHandlersManager.UnregisterEventsHandler(escapeAssistHandler);
+
+    CustomHandlersManager.UnregisterEventsHandler(roundPresenceHandler);
+    CustomHandlersManager.UnregisterEventsHandler(SCPWinHandler);
     
     CustomHandlersManager.UnregisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.UnregisterEventsHandler(generatorActivationHandler);
     CustomHandlersManager.UnregisterEventsHandler(warheadActivationHandler);
-    CustomHandlersManager.UnregisterEventsHandler(roundHandler);
     CustomHandlersManager.UnregisterEventsHandler(scp049Handler);
     CustomHandlersManager.UnregisterEventsHandler(doorHandler);
     CustomHandlersManager.UnregisterEventsHandler(cuffHandler);
