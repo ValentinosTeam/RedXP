@@ -29,7 +29,7 @@ public class XPGainEvents {
   private WarheadActivationHandler warheadActivationHandler = new();
   private CreateZombieHandler createZombieHandler = new();
   private DoorEventHandler doorHandler = new();
-  private CuffEventHandler cuffHandler = new();
+  private CuffHandler cuffHandler = new();
 
   public void Register() {
     CustomHandlersManager.RegisterEventsHandler(killHHHandler);
