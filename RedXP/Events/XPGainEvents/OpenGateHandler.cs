@@ -5,7 +5,7 @@ using LabApi.Features.Enums;
 
 namespace RedXP.Events.XPGainEvents;
 
-public class DoorEventHandler: CustomEventsHandler {
+public class OpenGateHandler : CustomEventsHandler {
   private static Config config => RedXP.Instance.Config;
   private static Translations translations => RedXP.Instance.Translations;
 

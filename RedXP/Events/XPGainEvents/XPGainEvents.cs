@@ -28,7 +28,7 @@ public class XPGainEvents {
   private GeneratorActivationHandler generatorActivationHandler = new();
   private WarheadActivationHandler warheadActivationHandler = new();
   private CreateZombieHandler createZombieHandler = new();
-  private DoorEventHandler doorHandler = new();
+  private OpenGateHandler openGateHandler = new();
   private CuffHandler cuffHandler = new();
 
   public void Register() {
@@ -51,7 +51,7 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(generatorActivationHandler);
     CustomHandlersManager.RegisterEventsHandler(warheadActivationHandler);
     CustomHandlersManager.RegisterEventsHandler(createZombieHandler);
-    CustomHandlersManager.RegisterEventsHandler(doorHandler);
+    CustomHandlersManager.RegisterEventsHandler(openGateHandler);
     CustomHandlersManager.RegisterEventsHandler(cuffHandler);
   }
 
@@ -75,7 +75,7 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(generatorActivationHandler);
     CustomHandlersManager.UnregisterEventsHandler(warheadActivationHandler);
     CustomHandlersManager.UnregisterEventsHandler(createZombieHandler);
-    CustomHandlersManager.UnregisterEventsHandler(doorHandler);
+    CustomHandlersManager.UnregisterEventsHandler(openGateHandler);
     CustomHandlersManager.UnregisterEventsHandler(cuffHandler);
   }
   
