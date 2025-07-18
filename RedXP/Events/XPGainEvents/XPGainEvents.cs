@@ -47,9 +47,10 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(roundPresenceHandler);
     CustomHandlersManager.RegisterEventsHandler(SCPWinHandler);
 
+    CustomHandlersManager.RegisterEventsHandler(warheadActivationHandler);
+
     CustomHandlersManager.RegisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.RegisterEventsHandler(generatorActivationHandler);
-    CustomHandlersManager.RegisterEventsHandler(warheadActivationHandler);
     CustomHandlersManager.RegisterEventsHandler(createZombieHandler);
     CustomHandlersManager.RegisterEventsHandler(openGateHandler);
     CustomHandlersManager.RegisterEventsHandler(cuffHandler);
@@ -70,10 +71,11 @@ public class XPGainEvents {
 
     CustomHandlersManager.UnregisterEventsHandler(roundPresenceHandler);
     CustomHandlersManager.UnregisterEventsHandler(SCPWinHandler);
+
+    CustomHandlersManager.UnregisterEventsHandler(warheadActivationHandler);
     
     CustomHandlersManager.UnregisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.UnregisterEventsHandler(generatorActivationHandler);
-    CustomHandlersManager.UnregisterEventsHandler(warheadActivationHandler);
     CustomHandlersManager.UnregisterEventsHandler(createZombieHandler);
     CustomHandlersManager.UnregisterEventsHandler(openGateHandler);
     CustomHandlersManager.UnregisterEventsHandler(cuffHandler);
