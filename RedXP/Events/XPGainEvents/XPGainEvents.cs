@@ -15,7 +15,9 @@ public class XPGainEvents {
   private KillHumanAsZombieHandler killHZHandler = new();
   private KillSuicideExplosionHandler killSEHandler = new();
 
-  private EscapeEventHandler escapeHandler = new();
+  private EscapeHandler escapeHandler = new();
+  private EscapeAssistHandler escapeAssistHandler = new();
+
   private SCP079LevelUpEventHandler scp079LevelUpHandler = new();
   private GeneratorEventHandler generatorHandler = new();
   private WarheadEventHandler warheadHandler = new();
@@ -33,6 +35,8 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(killSEHandler);
 
     CustomHandlersManager.RegisterEventsHandler(escapeHandler);
+    CustomHandlersManager.RegisterEventsHandler(escapeAssistHandler);
+
     CustomHandlersManager.RegisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.RegisterEventsHandler(generatorHandler);
     CustomHandlersManager.RegisterEventsHandler(warheadHandler);
@@ -49,8 +53,10 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(killSHHandler);
     CustomHandlersManager.UnregisterEventsHandler(killHZHandler);
     CustomHandlersManager.UnregisterEventsHandler(killSEHandler);
-    
+
     CustomHandlersManager.UnregisterEventsHandler(escapeHandler);
+    CustomHandlersManager.UnregisterEventsHandler(escapeAssistHandler);
+    
     CustomHandlersManager.UnregisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.UnregisterEventsHandler(generatorHandler);
     CustomHandlersManager.UnregisterEventsHandler(warheadHandler);
