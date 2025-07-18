@@ -3,12 +3,11 @@ using LabApi.Events.Arguments.WarheadEvents;
 
 namespace RedXP.Events.XPGainEvents;
 
-public class WarheadEventHandler : CustomEventsHandler {
+public class WarheadActivationHandler : CustomEventsHandler {
   private static Config config => RedXP.Instance.Config;
   private static Translations translations => RedXP.Instance.Translations;
 
   public override void OnWarheadStarted(WarheadStartedEventArgs ev) {
-    // activating the warhead on surface
     if (ev.Player == null) return;
 
     XPGainEvents.AddXPAndNotify(ev.Player, config.WarheadStarted_XP, translations.WarheadStarted_Msg);
