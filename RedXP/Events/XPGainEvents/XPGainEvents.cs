@@ -21,7 +21,7 @@ public class XPGainEvents {
   private EscapeHandler escapeHandler = new();
   private EscapeAssistHandler escapeAssistHandler = new();
 
-  private SCP079LevelUpEventHandler scp079LevelUpHandler = new();
+  private SCP079LevelUpHandler scp079LevelUpHandler = new();
   private GeneratorActivationHandler generatorActivationHandler = new();
   private WarheadActivationHandler warheadActivationHandler = new();
   private RoundEventHandler roundHandler = new();
