@@ -11,7 +11,6 @@ public class DamageSCP018Handler : CustomEventsHandler {
   public override void OnPlayerHurt(PlayerHurtEventArgs ev) {
     if (ev.Attacker == null || ev.Attacker == ev.Player) return;
 
-    // SCP-018 damage
     if (ev.DamageHandler is Scp018DamageHandler) {
       XPGainEvents.AddXPAndNotify(ev.Attacker, config.DamageSCP018_XP, translations.DamageSCP018_Msg);
     }
