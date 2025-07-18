@@ -5,14 +5,13 @@ using System.Collections.Generic;
 
 namespace RedXP.Events.XPGainEvents;
 
-public class GeneratorEventHandler : CustomEventsHandler {
+public class GeneratorActivationHandler : CustomEventsHandler {
   private static Config config => RedXP.Instance.Config;
   private static Translations translations => RedXP.Instance.Translations;
 
   private List<Generator> generatorsClaimed = new();
 
   public override void OnPlayerActivatedGenerator(PlayerActivatedGeneratorEventArgs ev) {
-    // activating a generator
     if (generatorsClaimed.Contains(ev.Generator)) return;
 
     generatorsClaimed.Add(ev.Generator);
