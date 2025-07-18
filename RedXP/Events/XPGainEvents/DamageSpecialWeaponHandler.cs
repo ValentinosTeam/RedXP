@@ -4,7 +4,7 @@ using PlayerStatsSystem;
 
 namespace RedXP.Events.XPGainEvents;
 
-public class DamageEventHandler : CustomEventsHandler {
+public class DamageSpecialWeaponHandler : CustomEventsHandler {
   private static Config config => RedXP.Instance.Config;
   private static Translations translations => RedXP.Instance.Translations;
 
@@ -16,10 +16,6 @@ public class DamageEventHandler : CustomEventsHandler {
     if (ev.DamageHandler is JailbirdDamageHandler
         || ev.DamageHandler is DisruptorDamageHandler) {
       XPGainEvents.AddXPAndNotify(ev.Attacker, config.DamageSpecialWeapon_XP, translations.DamageSpecialWeapon_Msg);
-    }
-    // SCP-018 damage
-    else if (ev.DamageHandler is Scp018DamageHandler) {
-      XPGainEvents.AddXPAndNotify(ev.Attacker, config.DamageSCP018_XP, translations.DamageSCP018_Msg);
     }
   }
 }

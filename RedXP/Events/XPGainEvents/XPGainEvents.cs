@@ -15,13 +15,15 @@ public class XPGainEvents {
   private KillHumanAsZombieHandler killHZHandler = new();
   private KillSuicideExplosionHandler killSEHandler = new();
 
+  private DamageSpecialWeaponHandler damageSpecialWeaponHandler = new();
+  private DamageSCP018Handler damageSCP018Handler = new();
+
   private EscapeHandler escapeHandler = new();
   private EscapeAssistHandler escapeAssistHandler = new();
 
   private SCP079LevelUpEventHandler scp079LevelUpHandler = new();
   private GeneratorEventHandler generatorHandler = new();
   private WarheadEventHandler warheadHandler = new();
-  private DamageEventHandler damageHandler = new();
   private RoundEventHandler roundHandler = new();
   private SCP049EventHandler scp049Handler = new();
   private DoorEventHandler doorHandler = new();
@@ -34,13 +36,15 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(killHZHandler);
     CustomHandlersManager.RegisterEventsHandler(killSEHandler);
 
+    CustomHandlersManager.RegisterEventsHandler(damageSpecialWeaponHandler);
+    CustomHandlersManager.RegisterEventsHandler(damageSCP018Handler);
+
     CustomHandlersManager.RegisterEventsHandler(escapeHandler);
     CustomHandlersManager.RegisterEventsHandler(escapeAssistHandler);
 
     CustomHandlersManager.RegisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.RegisterEventsHandler(generatorHandler);
     CustomHandlersManager.RegisterEventsHandler(warheadHandler);
-    CustomHandlersManager.RegisterEventsHandler(damageHandler);
     CustomHandlersManager.RegisterEventsHandler(roundHandler);
     CustomHandlersManager.RegisterEventsHandler(scp049Handler);
     CustomHandlersManager.RegisterEventsHandler(doorHandler);
@@ -53,6 +57,9 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(killSHHandler);
     CustomHandlersManager.UnregisterEventsHandler(killHZHandler);
     CustomHandlersManager.UnregisterEventsHandler(killSEHandler);
+    
+    CustomHandlersManager.UnregisterEventsHandler(damageSpecialWeaponHandler);
+    CustomHandlersManager.UnregisterEventsHandler(damageSCP018Handler);
 
     CustomHandlersManager.UnregisterEventsHandler(escapeHandler);
     CustomHandlersManager.UnregisterEventsHandler(escapeAssistHandler);
@@ -60,7 +67,6 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.UnregisterEventsHandler(generatorHandler);
     CustomHandlersManager.UnregisterEventsHandler(warheadHandler);
-    CustomHandlersManager.UnregisterEventsHandler(damageHandler);
     CustomHandlersManager.UnregisterEventsHandler(roundHandler);
     CustomHandlersManager.UnregisterEventsHandler(scp049Handler);
     CustomHandlersManager.UnregisterEventsHandler(doorHandler);
