@@ -7,7 +7,7 @@ public class KillHumanAsHumanHandler : CustomEventsHandler {
   private static Config config => RedXP.Instance.Config;
   private static Translations translations => RedXP.Instance.Translations;
 
-  public override void OnPlayerDeath(PlayerDeathEventArgs ev) {
+  public override void OnPlayerDying(PlayerDyingEventArgs ev) {
     if (ev.Attacker == null || ev.Attacker == ev.Player) return;
 
     if (ev.Attacker.IsHuman && ev.Player.IsHuman)
