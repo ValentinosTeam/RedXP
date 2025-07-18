@@ -3,7 +3,7 @@ using LabApi.Events.Arguments.PlayerEvents;
 
 namespace RedXP.Events.XPGainEvents;
 
-public class KillSCPAsHuman : CustomEventsHandler {
+public class KillSCPAsHumanHandler : CustomEventsHandler {
   private static Config config => RedXP.Instance.Config;
   private static Translations translations => RedXP.Instance.Translations;
 
