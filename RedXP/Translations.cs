@@ -46,6 +46,7 @@ public class Translations {
   public string Escape_Msg { get; set; } = "Escaped the facility";
   public string SCP079LevelUp_Msg { get; set; } = "Leveled up as SCP-079";
   public string ActivateUniqueGenerator_Msg { get; set; } = "Activated a generator for the first time";
+  public string DeactivateGenerator_Msg { get; set; } = "Deactivated a generator as an SCP";
   public string OpenGateFirstTime_Msg { get; set; } = "Opened a gate for the first time";
   public string WarheadStarted_Msg { get; set; } = "Started the warhead";
 }

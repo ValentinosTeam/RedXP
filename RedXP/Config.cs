@@ -24,6 +24,7 @@ public class Config {
   public int Escape_XP { get; set; } = 7;
   public int SCP079LevelUp_XP { get; set; } = 3;
   public int ActivateUniqueGenerator_XP { get; set; } = 3;
+  public int DeactivateGenerator_XP { get; set; } = 3;
   public int OpenGateFirstTime_XP { get; set; } = 5;
   public int WarheadStarted_XP { get; set; } = 7;
 
