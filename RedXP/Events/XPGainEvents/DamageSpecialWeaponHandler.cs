@@ -10,11 +10,10 @@ public class DamageSpecialWeaponHandler : CustomEventsHandler {
 
   public override void OnPlayerHurt(PlayerHurtEventArgs ev) {
     if (ev.Attacker == null || ev.Attacker == ev.Player) return;
+    if (ev.DamageHandler is not JailbirdDamageHandler
+        && ev.DamageHandler is not DisruptorDamageHandler) return;
 
     // TODO: handle the microhid (handle bursts as single damage events)
-    if (ev.DamageHandler is JailbirdDamageHandler
-        || ev.DamageHandler is DisruptorDamageHandler) {
-      XPGainEvents.AddXPAndNotify(ev.Attacker, config.DamageSpecialWeapon_XP, translations.DamageSpecialWeapon_Msg);
-    }
+    XPGainEvents.AddXPAndNotify(ev.Attacker, config.DamageSpecialWeapon_XP, translations.DamageSpecialWeapon_Msg);
   }
 }

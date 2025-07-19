@@ -9,8 +9,8 @@ public class KillHumanAsHumanHandler : CustomEventsHandler {
 
   public override void OnPlayerDying(PlayerDyingEventArgs ev) {
     if (ev.Attacker == null || ev.Attacker == ev.Player) return;
+    if (!ev.Attacker.IsHuman || !ev.Player.IsHuman) return;
 
-    if (ev.Attacker.IsHuman && ev.Player.IsHuman)
-      XPGainEvents.AddXPAndNotify(ev.Attacker, config.KillHumanAsHuman_XP, translations.KillHumanAsHuman_Msg);
+    XPGainEvents.AddXPAndNotify(ev.Attacker, config.KillHumanAsHuman_XP, translations.KillHumanAsHuman_Msg);
   }
 }

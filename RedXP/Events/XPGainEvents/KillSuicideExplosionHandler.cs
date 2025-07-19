@@ -10,12 +10,11 @@ public class KillSuicideExplosionHandler : CustomEventsHandler {
 
   public override void OnPlayerDeath(PlayerDeathEventArgs ev) {
     if (ev.Attacker == null || ev.Attacker == ev.Player) return;
+    if (ev.DamageHandler is not ExplosionDamageHandler explosionDamageHandler) return;
+    if (explosionDamageHandler.ExplosionType != ExplosionType.PinkCandy
+        && explosionDamageHandler.ExplosionType != ExplosionType.Cola
+        && explosionDamageHandler.ExplosionType != ExplosionType.Jailbird) return;
 
-    if (ev.DamageHandler is ExplosionDamageHandler explosionDamageHandler
-        && (explosionDamageHandler.ExplosionType == ExplosionType.PinkCandy
-        || explosionDamageHandler.ExplosionType == ExplosionType.Cola
-        || explosionDamageHandler.ExplosionType == ExplosionType.Jailbird)) {
-      XPGainEvents.AddXPAndNotify(ev.Attacker, config.SuicideKill_XP, translations.SuicideKill_Msg);
-    }
+    XPGainEvents.AddXPAndNotify(ev.Attacker, config.SuicideKill_XP, translations.SuicideKill_Msg);
   }
 }

@@ -10,8 +10,8 @@ public class KillHumanAsZombieHandler : CustomEventsHandler {
 
   public override void OnPlayerDying(PlayerDyingEventArgs ev) {
     if (ev.Attacker == null || ev.Attacker == ev.Player) return;
+    if (ev.Attacker.Role != RoleTypeId.Scp0492 || !ev.Player.IsHuman) return;
 
-    if (ev.Attacker.Role == RoleTypeId.Scp0492 && ev.Player.IsHuman)
-      XPGainEvents.AddXPAndNotify(ev.Attacker, config.KillHumanAsZombie_XP, translations.KillHumanAsZombie_Msg);
+    XPGainEvents.AddXPAndNotify(ev.Attacker, config.KillHumanAsZombie_XP, translations.KillHumanAsZombie_Msg);
   }
 }

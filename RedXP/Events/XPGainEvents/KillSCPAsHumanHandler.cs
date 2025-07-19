@@ -9,8 +9,8 @@ public class KillSCPAsHumanHandler : CustomEventsHandler {
 
   public override void OnPlayerDying(PlayerDyingEventArgs ev) {
     if (ev.Attacker == null || ev.Attacker == ev.Player) return;
+    if (!ev.Attacker.IsHuman || !ev.Player.IsSCP) return;
 
-    if (ev.Attacker.IsHuman && ev.Player.IsSCP)
-      XPGainEvents.AddXPAndNotify(ev.Attacker, config.KillScpAsHuman_XP, translations.KillScpAsHuman_Msg);
+    XPGainEvents.AddXPAndNotify(ev.Attacker, config.KillScpAsHuman_XP, translations.KillScpAsHuman_Msg);
   }
 }
