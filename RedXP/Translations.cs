@@ -5,7 +5,7 @@ public class Translations {
   public string XPSummaryTemplate { get; set; } = "XP summary\nUser ID: {0}\nDisplay name: {1}\nXP: {2}\nLevel: {3}\n"
                                                 + "Last XP gain event: {4}\nFirst XP gained on: {5}";
   
-  public string XPGainHintTemplate { get; set; } = "\n\n\n\n\n\n{0}; +{1} XP";
+  public string XPGainHintTemplate { get; set; } = "\n\n\n\n\n\n\n\n\n<b><size=0.8em><color=#EFBF04>{0}</color>\n<color=#AB8803>+{1} XP</color></size></b>";
   
   public string DisplayNameTemplate { get; set; } = "LVL {0} | {1}";
   
