@@ -9,6 +9,8 @@ public class EscapeAssistHandler : CustomEventsHandler {
 
   public override void OnPlayerEscaping(PlayerEscapingEventArgs ev) {
     if (!ev.Player.IsDisarmed || ev.Player.DisarmedBy == null) return;
+    // don't give XP if the player can't escape
+    if (ev.EscapeScenario == Escape.EscapeScenarioType.None) return;
 
     XPGainEvents.AddXPAndNotify(ev.Player.DisarmedBy, config.EscapeAssist_XP, translations.EscapeAssist_Msg);
   }
