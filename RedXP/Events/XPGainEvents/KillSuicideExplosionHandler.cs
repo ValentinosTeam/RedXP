@@ -10,6 +10,7 @@ public class KillSuicideExplosionHandler : CustomEventsHandler {
 
   public override void OnPlayerDeath(PlayerDeathEventArgs ev) {
     if (ev.Attacker == null || ev.Attacker == ev.Player) return;
+    if (ev.Attacker.Team == ev.Player.Team) return;
     if (ev.DamageHandler is not ExplosionDamageHandler explosionDamageHandler) return;
     if (explosionDamageHandler.ExplosionType != ExplosionType.PinkCandy
         && explosionDamageHandler.ExplosionType != ExplosionType.Cola
