@@ -8,6 +8,9 @@ public class Config {
 
   public string MySql_ConnectionString { get; set; } = "server=127.0.0.1;port=3306;uid=root;pwd=testpw;database=redxp";
 
+  public int ActivateGenerator_Cooldown { get; set; } = 90;
+  public int ActivateGenerator_MaxTimes { get; set; } = 3;
+
   public int KillHumanAsHuman_XP { get; set; } = 5;
   public int KillHumanAsScp_XP { get; set; } = 3;
   public int KillScpAsHuman_XP { get; set; } = 15;
@@ -27,7 +30,7 @@ public class Config {
   public int SCP049CreateZombie_XP { get; set; } = 2;
   public int Escape_XP { get; set; } = 7;
   public int SCP079LevelUp_XP { get; set; } = 3;
-  public int ActivateUniqueGenerator_XP { get; set; } = 3;
+  public int ActivateGenerator_XP { get; set; } = 3;
   public int DeactivateGenerator_XP { get; set; } = 3;
   public int OpenGateFirstTime_XP { get; set; } = 5;
   public int WarheadStarted_XP { get; set; } = 7;
