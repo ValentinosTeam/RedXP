@@ -15,9 +15,6 @@ public class XPGainEvents {
   private KillHumanAsZombieHandler killHZHandler = new();
   private KillSuicideExplosionHandler killSEHandler = new();
 
-  private DamageSpecialWeaponHandler damageSpecialWeaponHandler = new();
-  private DamageSCP018Handler damageSCP018Handler = new();
-
   private EscapeHandler escapeHandler = new();
   private EscapeAssistHandler escapeAssistHandler = new();
 
@@ -39,9 +36,6 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(killSHHandler);
     CustomHandlersManager.RegisterEventsHandler(killHZHandler);
     CustomHandlersManager.RegisterEventsHandler(killSEHandler);
-
-    CustomHandlersManager.RegisterEventsHandler(damageSpecialWeaponHandler);
-    CustomHandlersManager.RegisterEventsHandler(damageSCP018Handler);
 
     CustomHandlersManager.RegisterEventsHandler(escapeHandler);
     CustomHandlersManager.RegisterEventsHandler(escapeAssistHandler);
@@ -67,9 +61,6 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(killHZHandler);
     CustomHandlersManager.UnregisterEventsHandler(killSEHandler);
     
-    CustomHandlersManager.UnregisterEventsHandler(damageSpecialWeaponHandler);
-    CustomHandlersManager.UnregisterEventsHandler(damageSCP018Handler);
-
     CustomHandlersManager.UnregisterEventsHandler(escapeHandler);
     CustomHandlersManager.UnregisterEventsHandler(escapeAssistHandler);
 
