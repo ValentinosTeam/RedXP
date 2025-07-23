@@ -37,6 +37,11 @@ public class Translations {
   public string KillHumanAsZombie_Msg { get; set; } = "Killed a human as a zombie";
   public string SuicideKill_Msg { get; set; } = "Killed somebody with a suicide explosion";
   public string Cuffed_Msg { get; set; } = "Cuffed somebody";
+  public string UsageSCP1853_Msg { get; set; } = "Used SCP-1853";
+  public string UsageSCP207_Msg { get; set; } = "Used a cola";
+  public string UsageAntiSCP207_Msg { get; set; } = "Used an anti-cola";
+  public string UsageSCP018_Msg { get; set; } = "Threw an SCP-018";
+  public string UsageSCP2176_Msg { get; set; } = "Threw an SCP-2176";
   public string EscapeAssist_Msg { get; set; } = "Helped somebody escape";
   public string RoundPresence_Msg { get; set; } = "Present at round start and end";
   public string SCPWin_Msg { get; set; } = "Won as the SCP team";

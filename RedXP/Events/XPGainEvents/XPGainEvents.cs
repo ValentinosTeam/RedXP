@@ -15,6 +15,12 @@ public class XPGainEvents {
   private KillHumanAsZombieHandler killHZHandler = new();
   private KillSuicideExplosionHandler killSEHandler = new();
 
+  private UsageSCP1853Handler usageSCP1853Handler = new();
+  private UsageSCP207Handler usageSCP207Handler = new();
+  private UsageAntiSCP207Handler usageAntiSCP207Handler = new();
+  private UsageSCP018Handler usageSCP018Handler = new();
+  private UsageSCP2176Handler usageSCP2176Handler = new();
+
   private EscapeHandler escapeHandler = new();
   private EscapeAssistHandler escapeAssistHandler = new();
 
@@ -36,6 +42,12 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(killSHHandler);
     CustomHandlersManager.RegisterEventsHandler(killHZHandler);
     CustomHandlersManager.RegisterEventsHandler(killSEHandler);
+    
+    CustomHandlersManager.RegisterEventsHandler(usageSCP1853Handler);
+    CustomHandlersManager.RegisterEventsHandler(usageSCP207Handler);
+    CustomHandlersManager.RegisterEventsHandler(usageAntiSCP207Handler);
+    CustomHandlersManager.RegisterEventsHandler(usageSCP018Handler);
+    CustomHandlersManager.RegisterEventsHandler(usageSCP2176Handler);
 
     CustomHandlersManager.RegisterEventsHandler(escapeHandler);
     CustomHandlersManager.RegisterEventsHandler(escapeAssistHandler);
@@ -60,6 +72,12 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(killSHHandler);
     CustomHandlersManager.UnregisterEventsHandler(killHZHandler);
     CustomHandlersManager.UnregisterEventsHandler(killSEHandler);
+    
+    CustomHandlersManager.UnregisterEventsHandler(usageSCP1853Handler);
+    CustomHandlersManager.UnregisterEventsHandler(usageSCP207Handler);
+    CustomHandlersManager.UnregisterEventsHandler(usageAntiSCP207Handler);
+    CustomHandlersManager.UnregisterEventsHandler(usageSCP018Handler);
+    CustomHandlersManager.UnregisterEventsHandler(usageSCP2176Handler);
     
     CustomHandlersManager.UnregisterEventsHandler(escapeHandler);
     CustomHandlersManager.UnregisterEventsHandler(escapeAssistHandler);
