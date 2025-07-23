@@ -41,6 +41,12 @@ public class SetXPCommand : ICommand {
 
   private bool setOnline(Player player, int amount, out string response) {
     XPDataStore xpStore = XPDataStore.Get(player);
+
+    if (!xpStore.DataAvailable) {
+      response = translations.DataNotAvailableError_Msg;
+      return false;
+    }
+
     XPUserData xpData = XPUserData.Get(player);
     xpData.XP = amount;
     xpStore.UpdateDisplayName();

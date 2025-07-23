@@ -103,6 +103,10 @@ public class XPGainEvents {
   }
   
   public static void AddXPAndNotify(Player player, int amount, string eventMessage) {
+    XPDataStore xpStore = XPDataStore.Get(player);
+    
+    if (!xpStore.DataAvailable) return;
+
     if (player.IsDummy) {
       Logger.Info(
           String.Format("Skipping addition of {0} XP for dummy {1} ({2})",
@@ -111,7 +115,6 @@ public class XPGainEvents {
       return;
     }
     
-    XPDataStore xpStore = XPDataStore.Get(player);
     xpStore.AddXP(amount);
     xpStore.XPData.LastXPGainEvent = eventMessage;
 

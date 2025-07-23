@@ -19,7 +19,7 @@ public class XPDataStore : CustomDataStore<XPDataStore> {
     string displayLevel;
     bool levelPublic = ServerSpecificSettings.IsLevelPublic(Owner);
 
-    if (!levelPublic || Owner.DoNotTrack)
+    if (!levelPublic || XPData == null)
       displayLevel = "?";
     else
       displayLevel = XPData.Level.ToString();
@@ -29,15 +29,19 @@ public class XPDataStore : CustomDataStore<XPDataStore> {
         displayLevel, Owner.Nickname);
   }
 
+  public bool DataAvailable => XPData != null;
+
   protected override void OnInstanceDestroyed() {
-    if (Owner.DoNotTrack || !database.Available) return;
+    if (!database.Available) return;
     
-    if (XPData != null)
+    if (DataAvailable)
       XPData.SaveToDB();
   }
 
   public void AddXP(int amount) {
     if (Owner.DoNotTrack) return;
+
+    if (!DataAvailable) return;
 
     if (XPData.FirstXPDate == null)
       XPData.FirstXPDate = DateTime.Now;

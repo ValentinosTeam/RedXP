@@ -18,6 +18,13 @@ public class SeeXPCommandClient : ICommand {
       return false;
     }
 
+    XPDataStore xpStore = XPDataStore.Get(player);
+    
+    if (!xpStore.DataAvailable) {
+      response = translations.DataNotAvailableError_Msg;
+      return false;
+    }
+
     response = CommandUtils.GenerateSummary(XPUserData.Get(player));
 
     return true;
