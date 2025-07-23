@@ -10,6 +10,7 @@ public class Config {
 
   public int ActivateGenerator_Cooldown { get; set; } = 90;
   public int ActivateGenerator_MaxTimes { get; set; } = 3;
+  public int DeactivateGenerator_Cooldown { get; set; } = 90;
 
   public int KillHumanAsHuman_XP { get; set; } = 5;
   public int KillHumanAsScp_XP { get; set; } = 3;
