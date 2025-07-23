@@ -42,6 +42,7 @@ public class Translations {
   public string UsageAntiSCP207_Msg { get; set; } = "Used an anti-cola";
   public string UsageSCP018_Msg { get; set; } = "Threw an SCP-018";
   public string UsageSCP2176_Msg { get; set; } = "Threw an SCP-2176";
+  public string PickupSpecialWeapon_Msg { get; set; } = "Picked up a special weapon";
   public string EscapeAssist_Msg { get; set; } = "Helped somebody escape";
   public string RoundPresence_Msg { get; set; } = "Present at round start and end";
   public string SCPWin_Msg { get; set; } = "Won as the SCP team";

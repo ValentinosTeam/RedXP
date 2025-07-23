@@ -18,6 +18,7 @@ public class Config {
   public int UsageAntiSCP207_XP { get; set; } = 7;
   public int UsageSCP018_XP { get; set; } = 5;
   public int UsageSCP2176_XP { get; set; } = 5;
+  public int PickupSpecialWeapon_XP { get; set; } = 7;
   public int Cuffed_XP { get; set; } = 7;
   public int EscapeAssist_XP { get; set; } = 3;
   public int RoundPresence_XP { get; set; } = 5;
