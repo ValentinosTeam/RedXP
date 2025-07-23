@@ -13,11 +13,11 @@ public class ServerSpecificSettings {
     SSTwoButtonsSetting displayLevelToggle = new(config.SSSettings_DisplayLevel_ID,
         translations.SSSettings_DisplayLevel_Msg,
         translations.SSSettings_Enabled, translations.SSSettings_Disabled,
-        true);
+        false);
     SSTwoButtonsSetting xpGainHintsDisplayToggle = new(config.SSSettings_ShowXPGainHints_ID,
         translations.SSSettings_ShowXPGainHints_Msg,
         translations.SSSettings_Enabled, translations.SSSettings_Disabled,
-        true);
+        false);
 
     ServerSpecificSettingsSync.DefinedSettings = [..ServerSpecificSettingsSync.DefinedSettings ?? [], header, displayLevelToggle, xpGainHintsDisplayToggle];
     ServerSpecificSettingsSync.SendToAll();
