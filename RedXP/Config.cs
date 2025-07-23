@@ -2,7 +2,7 @@ namespace RedXP;
 
 public class Config {
   public float XPGainHintDuration { get; set; } = 1.5f;
-  public string LevelFormula { get; set; } = "1 + 0.1*x";
+  public string LevelFormula { get; set; } = "1 + 0.45 * sqrt(x)";
 
   public int Leaderboard_N { get; set; } = 10;
 
