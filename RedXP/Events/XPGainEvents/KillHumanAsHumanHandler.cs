@@ -9,8 +9,10 @@ public class KillHumanAsHumanHandler : CustomEventsHandler {
 
   public override void OnPlayerDying(PlayerDyingEventArgs ev) {
     if (ev.Attacker == null || ev.Attacker == ev.Player) return;
-    if (!ev.Attacker.IsHuman || !ev.Player.IsHuman) return;
-    if (ev.Attacker.Team == ev.Player.Team) return;
+    // treat being dead as being human (workaround for kills after death)
+    if (!(ev.Attacker.IsHuman || !ev.Attacker.IsAlive) || !ev.Player.IsHuman) return;
+    // ignore the friendly fire check if the attacker is dead (see above)
+    if (ev.Attacker.Team == ev.Player.Team && ev.Attacker.IsAlive) return;
 
     XPGainEvents.AddXPAndNotify(ev.Attacker, config.KillHumanAsHuman_XP, translations.KillHumanAsHuman_Msg);
   }
