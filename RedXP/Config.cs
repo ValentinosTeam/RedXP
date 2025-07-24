@@ -11,6 +11,7 @@ public class Config {
   public int ActivateGenerator_Cooldown { get; set; } = 90;
   public int ActivateGenerator_MaxTimes { get; set; } = 3;
   public int DeactivateGenerator_Cooldown { get; set; } = 90;
+  public int WarheadEnabled_Cooldown { get; set; } = 10;
 
   public int KillHumanAsHuman_XP { get; set; } = 5;
   public int KillHumanAsScp_XP { get; set; } = 3;
@@ -42,6 +43,7 @@ public class Config {
   public int DeactivateGenerator_XP { get; set; } = 3;
   public int OpenGateFirstTime_XP { get; set; } = 5;
   public int WarheadStarted_XP { get; set; } = 7;
+  public int WarheadEnabled_XP { get; set; } = 5;
 
   public int SSSettings_ShowXPGainHints_ID { get; set; } = 51413;
   public int SSSettings_DisplayLevel_ID { get; set; } = 81712;

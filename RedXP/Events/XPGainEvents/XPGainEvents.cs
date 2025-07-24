@@ -2,6 +2,7 @@ using LabApi.Features.Wrappers;
 using LabApi.Events.CustomHandlers;
 using System;
 using LabApi.Features.Console;
+using RedXP.Patched.Events.Handlers;
 
 namespace RedXP.Events.XPGainEvents;
 
@@ -38,9 +39,11 @@ public class XPGainEvents {
   
   private GeneratorActivationHandler generatorActivationHandler = new();
   private GeneratorDectivationHandler generatorDeactivationHandler = new();
+  
+  private WarheadActivationHandler warheadActivationHandler = new();
+  private WarheadEnabledHandler warheadEnabledHandler = new();
 
   private SCP079LevelUpHandler scp079LevelUpHandler = new();
-  private WarheadActivationHandler warheadActivationHandler = new();
   private CreateZombieHandler createZombieHandler = new();
   private OpenGateHandler openGateHandler = new();
   private CuffHandler cuffHandler = new();
@@ -74,7 +77,8 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(SCPWinHandler);
 
     CustomHandlersManager.RegisterEventsHandler(warheadActivationHandler);
-    
+    WarheadEvents.Enabled += warheadEnabledHandler.OnWarheadEnabled;
+
     CustomHandlersManager.RegisterEventsHandler(generatorActivationHandler);
     CustomHandlersManager.RegisterEventsHandler(generatorDeactivationHandler);
 
@@ -113,6 +117,7 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(SCPWinHandler);
 
     CustomHandlersManager.UnregisterEventsHandler(warheadActivationHandler);
+    WarheadEvents.Enabled -= warheadEnabledHandler.OnWarheadEnabled;
     
     CustomHandlersManager.UnregisterEventsHandler(generatorActivationHandler);
     CustomHandlersManager.UnregisterEventsHandler(generatorDeactivationHandler);

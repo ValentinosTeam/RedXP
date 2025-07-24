@@ -9,7 +9,7 @@ public class WarheadActivationHandler : CustomEventsHandler {
 
   public override void OnWarheadStarted(WarheadStartedEventArgs ev) {
     if (ev.Player == null) return;
-
+    
     XPGainEvents.AddXPAndNotify(ev.Player, config.WarheadStarted_XP, translations.WarheadStarted_Msg);
   }
 }

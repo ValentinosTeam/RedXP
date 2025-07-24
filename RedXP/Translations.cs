@@ -61,4 +61,5 @@ public class Translations {
   public string DeactivateGenerator_Msg { get; set; } = "Deactivated a generator as an SCP";
   public string OpenGateFirstTime_Msg { get; set; } = "Opened a gate for the first time";
   public string WarheadStarted_Msg { get; set; } = "Started the warhead";
+  public string WarheadEnabled_Msg { get; set; } = "Enabled the warhead";
 }
