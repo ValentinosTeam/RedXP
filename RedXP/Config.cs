@@ -27,6 +27,7 @@ public class Config {
   public int UsageSCP1576_XP { get; set; } = 3;
   public int UsageSCP244_XP { get; set; } = 5;
   public int UsageSCP330_XP { get; set; } = 1;
+  public int UsageSCP1344_XP { get; set; } = 5;
   public int PickupSpecialWeapon_XP { get; set; } = 7;
   public int Cuffed_XP { get; set; } = 7;
   public int EscapeAssist_XP { get; set; } = 3;

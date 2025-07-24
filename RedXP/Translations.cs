@@ -48,6 +48,7 @@ public class Translations {
   public string UsageSCP1576_Msg { get; set; } = "Used SCP-1576";
   public string UsageSCP244_Msg { get; set; } = "Used SCP-244";
   public string UsageSCP330_Msg { get; set; } = "Used a candy";
+  public string UsageSCP1344_Msg { get; set; } = "Used SCP-1344";
   public string PickupSpecialWeapon_Msg { get; set; } = "Picked up a special weapon";
   public string EscapeAssist_Msg { get; set; } = "Helped somebody escape";
   public string RoundPresence_Msg { get; set; } = "Present at round start and end";
