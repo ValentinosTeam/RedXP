@@ -11,7 +11,7 @@ class WarheadEnabledEventPatch {
 
     if (colliderId != 2) return; // 2 is the lever
     if (AlphaWarheadNukesitePanel.Singleton.enabled) {
-      WarheadEnabledEventArgs ev = new(ply, AlphaWarheadController.Singleton.Info);
+      WarheadEnabledEventArgs ev = new(ply, info);
       WarheadEvents.OnEnabled(ev);
     } else {
       // invoke the Disabled event here when needed
