@@ -28,6 +28,7 @@ public class XPGainEvents {
   private UsageSCP1344Handler usageSCP1344Handler = new();
 
   private PickupSpecialWeaponHandler pickupSpecialWeaponHandler = new();
+  private PickupSCP127Handler pickupSCP127Handler = new();
 
   private EscapeHandler escapeHandler = new();
   private EscapeAssistHandler escapeAssistHandler = new();
@@ -64,6 +65,7 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(usageSCP1344Handler);
     
     CustomHandlersManager.RegisterEventsHandler(pickupSpecialWeaponHandler);
+    CustomHandlersManager.RegisterEventsHandler(pickupSCP127Handler);
 
     CustomHandlersManager.RegisterEventsHandler(escapeHandler);
     CustomHandlersManager.RegisterEventsHandler(escapeAssistHandler);
@@ -102,6 +104,7 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(usageSCP1344Handler);
    
     CustomHandlersManager.UnregisterEventsHandler(pickupSpecialWeaponHandler);
+    CustomHandlersManager.UnregisterEventsHandler(pickupSCP127Handler);
 
     CustomHandlersManager.UnregisterEventsHandler(escapeHandler);
     CustomHandlersManager.UnregisterEventsHandler(escapeAssistHandler);

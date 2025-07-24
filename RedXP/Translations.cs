@@ -50,6 +50,7 @@ public class Translations {
   public string UsageSCP330_Msg { get; set; } = "Used a candy";
   public string UsageSCP1344_Msg { get; set; } = "Used SCP-1344";
   public string PickupSpecialWeapon_Msg { get; set; } = "Picked up a special weapon";
+  public string PickupSCP127_Msg { get; set; } = "Picked up SCP-127 for the first time";
   public string EscapeAssist_Msg { get; set; } = "Helped somebody escape";
   public string RoundPresence_Msg { get; set; } = "Present at round start and end";
   public string SCPWin_Msg { get; set; } = "Won as the SCP team";
