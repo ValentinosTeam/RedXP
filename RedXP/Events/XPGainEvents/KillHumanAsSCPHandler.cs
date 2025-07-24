@@ -1,5 +1,6 @@
 using LabApi.Events.CustomHandlers;
 using LabApi.Events.Arguments.PlayerEvents;
+using LabApi.Events.Arguments.Scp106Events;
 
 namespace RedXP.Events.XPGainEvents;
 
@@ -12,5 +13,12 @@ public class KillHumanAsSCPHandler : CustomEventsHandler {
     if (!ev.Attacker.IsSCP || !ev.Player.IsHuman) return;
 
     XPGainEvents.AddXPAndNotify(ev.Attacker, config.KillHumanAsScp_XP, translations.KillHumanAsScp_Msg);
+  }
+
+  // count teleportation by 106 as a kill
+  public override void OnScp106TeleportedPlayer(Scp106TeleportedPlayerEvent ev) {
+    if (!ev.Target.IsHuman) return;
+
+    XPGainEvents.AddXPAndNotify(ev.Player, config.KillHumanAsScp_XP, translations.KillHumanAsScp_Msg);
   }
 }
