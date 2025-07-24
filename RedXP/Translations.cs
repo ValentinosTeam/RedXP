@@ -43,6 +43,11 @@ public class Translations {
   public string UsageAntiSCP207_Msg { get; set; } = "Used an anti-cola";
   public string UsageSCP018_Msg { get; set; } = "Threw an SCP-018";
   public string UsageSCP2176_Msg { get; set; } = "Threw an SCP-2176";
+  public string UsageSCP500_Msg { get; set; } = "Used SCP-500";
+  public string UsageSCP268_Msg { get; set; } = "Used SCP-268";
+  public string UsageSCP1576_Msg { get; set; } = "Used SCP-1576";
+  public string UsageSCP244_Msg { get; set; } = "Used SCP-244";
+  public string UsageSCP330_Msg { get; set; } = "Used a candy";
   public string PickupSpecialWeapon_Msg { get; set; } = "Picked up a special weapon";
   public string EscapeAssist_Msg { get; set; } = "Helped somebody escape";
   public string RoundPresence_Msg { get; set; } = "Present at round start and end";
