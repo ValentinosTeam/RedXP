@@ -12,7 +12,7 @@ public class Database {
     Connection = new(connectionString);
   }
 
-  private void createTable() {
+  public void CreateTable() {
     using MySqlCommand cmd = Connection.CreateCommand();
     cmd.CommandText = @"
 CREATE TABLE IF NOT EXISTS players (
@@ -29,7 +29,7 @@ last_xp_gain_event VARCHAR(255) NOT NULL
   public void Connect() {
     Connection.Open();
     Available = true;
-    createTable();
+    CreateTable();
   }
 
   public void Disconnect() {
