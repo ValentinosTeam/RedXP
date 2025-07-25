@@ -45,8 +45,10 @@ public class XPGainEvents {
   private WarheadActivationHandler warheadActivationHandler = new();
   private WarheadEnabledHandler warheadEnabledHandler = new();
 
-  private SCP079LevelUpHandler scp079LevelUpHandler = new();
   private CreateZombieHandler createZombieHandler = new();
+  private SCP3114DisguiseHandler scp3114DisguiseHandler = new();
+  
+  private SCP079LevelUpHandler scp079LevelUpHandler = new();
   private OpenGateHandler openGateHandler = new();
   private CuffHandler cuffHandler = new();
 
@@ -86,8 +88,10 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(generatorActivationHandler);
     CustomHandlersManager.RegisterEventsHandler(generatorDeactivationHandler);
 
-    CustomHandlersManager.RegisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.RegisterEventsHandler(createZombieHandler);
+    SCP3114Events.Disguised += scp3114DisguiseHandler.OnSCP3114Disguised;
+    
+    CustomHandlersManager.RegisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.RegisterEventsHandler(openGateHandler);
     CustomHandlersManager.RegisterEventsHandler(cuffHandler);
   }
@@ -128,8 +132,10 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(generatorActivationHandler);
     CustomHandlersManager.UnregisterEventsHandler(generatorDeactivationHandler);
     
+    CustomHandlersManager.RegisterEventsHandler(createZombieHandler);
+    SCP3114Events.Disguised -= scp3114DisguiseHandler.OnSCP3114Disguised;
+    
     CustomHandlersManager.UnregisterEventsHandler(scp079LevelUpHandler);
-    CustomHandlersManager.UnregisterEventsHandler(createZombieHandler);
     CustomHandlersManager.UnregisterEventsHandler(openGateHandler);
     CustomHandlersManager.UnregisterEventsHandler(cuffHandler);
   }

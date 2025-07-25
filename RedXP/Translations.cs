@@ -59,6 +59,7 @@ public class Translations {
   public string RoundPresence_Msg { get; set; } = "Present at round start and end";
   public string SCPWin_Msg { get; set; } = "Won as the SCP team";
   public string SCP049CreateZombie_Msg { get; set; } = "Created a zombie as SCP-049";
+  public string SCP3114Disguise_Msg { get; set; } = "Took somebody's skin as SCP-3114";
   public string Escape_Msg { get; set; } = "Escaped the facility";
   public string SCP079LevelUp_Msg { get; set; } = "Leveled up as SCP-079";
   public string ActivateGenerator_Msg { get; set; } = "Activated a generator";
