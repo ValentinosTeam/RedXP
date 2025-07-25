@@ -12,6 +12,8 @@ public class SSSetingsEventHandler : CustomEventsHandler {
   }
 
   public override void OnPlayerJoined(PlayerJoinedEventArgs ev) {
+    if (config.Invisitesting) return;
+
     ServerSpecificSettingsSync.SendToPlayer(ev.Player.ReferenceHub);
   }
 }

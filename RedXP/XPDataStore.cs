@@ -14,6 +14,7 @@ public class XPDataStore : CustomDataStore<XPDataStore> {
   public XPDataStore(Player owner) : base(owner) {}
 
   public void UpdateDisplayName() {
+    if (config.Invisitesting) return;
     if (Owner.Nickname == null) return;
 
     string displayLevel;

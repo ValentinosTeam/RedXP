@@ -8,6 +8,8 @@ public class ServerSpecificSettings {
   private static Translations translations => RedXP.Instance.Translations;
 
   public static void Register() {
+    if (config.Invisitesting) return;
+
     SSGroupHeader header = new("RedXP");
     // TODO: update display name when this is toggled
     SSTwoButtonsSetting displayLevelToggle = new(config.SSSettings_DisplayLevel_ID,
@@ -24,6 +26,8 @@ public class ServerSpecificSettings {
   }
 
   public static bool IsLevelPublic(Player player) {
+    if (config.Invisitesting) return false;
+
     SSTwoButtonsSetting setting = ServerSpecificSettingsSync
       .GetSettingOfUser<SSTwoButtonsSetting>(
           player.ReferenceHub,
@@ -33,6 +37,8 @@ public class ServerSpecificSettings {
   }
 
   public static bool IsXPGainHintsDisplayEnabled(Player player) {
+    if (config.Invisitesting) return false;
+    
     SSTwoButtonsSetting setting = ServerSpecificSettingsSync
       .GetSettingOfUser<SSTwoButtonsSetting>(
           player.ReferenceHub,
