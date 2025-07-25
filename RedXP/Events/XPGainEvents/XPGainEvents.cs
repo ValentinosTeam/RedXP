@@ -3,6 +3,7 @@ using LabApi.Events.CustomHandlers;
 using System;
 using LabApi.Features.Console;
 using RedXP.Patched.Events.Handlers;
+using RedXP.Patched.Events.CustomHandlers;
 
 namespace RedXP.Events.XPGainEvents;
 
@@ -83,13 +84,13 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(SCPWinHandler);
 
     CustomHandlersManager.RegisterEventsHandler(warheadActivationHandler);
-    WarheadEvents.Enabled += warheadEnabledHandler.OnWarheadEnabled;
+    PatchedHandlersManager.RegisterEventsHandler(warheadEnabledHandler);
 
     CustomHandlersManager.RegisterEventsHandler(generatorActivationHandler);
     CustomHandlersManager.RegisterEventsHandler(generatorDeactivationHandler);
 
     CustomHandlersManager.RegisterEventsHandler(createZombieHandler);
-    SCP3114Events.Disguised += scp3114DisguiseHandler.OnSCP3114Disguised;
+    PatchedHandlersManager.RegisterEventsHandler(scp3114DisguiseHandler);
     
     CustomHandlersManager.RegisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.RegisterEventsHandler(openGateHandler);
@@ -127,13 +128,13 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(SCPWinHandler);
 
     CustomHandlersManager.UnregisterEventsHandler(warheadActivationHandler);
-    WarheadEvents.Enabled -= warheadEnabledHandler.OnWarheadEnabled;
+    PatchedHandlersManager.UnregisterEventsHandler(warheadEnabledHandler);
     
     CustomHandlersManager.UnregisterEventsHandler(generatorActivationHandler);
     CustomHandlersManager.UnregisterEventsHandler(generatorDeactivationHandler);
     
-    CustomHandlersManager.RegisterEventsHandler(createZombieHandler);
-    SCP3114Events.Disguised -= scp3114DisguiseHandler.OnSCP3114Disguised;
+    CustomHandlersManager.UnregisterEventsHandler(createZombieHandler);
+    PatchedHandlersManager.UnregisterEventsHandler(scp3114DisguiseHandler);
     
     CustomHandlersManager.UnregisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.UnregisterEventsHandler(openGateHandler);
