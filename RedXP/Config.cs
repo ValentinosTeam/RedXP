@@ -17,6 +17,7 @@ public class Config {
   public int KillHumanAsScp_XP { get; set; } = 3;
   public int KillScpAsHuman_XP { get; set; } = 15;
   public int KillHumanAsZombie_XP { get; set; } = 5;
+  public int KillZombieAsHuman_XP { get; set; } = 3;
   public int SuicideKill_XP { get; set; } = 7;
   public int UsageSCP1853_XP { get; set; } = 5;
   public int UsageSCP207_XP { get; set; } = 5;

@@ -38,6 +38,7 @@ public class Translations {
   public string KillHumanAsScp_Msg { get; set; } = "Killed a human as an SCP";
   public string KillScpAsHuman_Msg { get; set; } = "Killed an SCP as a human";
   public string KillHumanAsZombie_Msg { get; set; } = "Killed a human as a zombie";
+  public string KillZombieAsHuman_Msg { get; set; } = "Killed a zombie as a human";
   public string SuicideKill_Msg { get; set; } = "Killed somebody with a suicide explosion";
   public string Cuffed_Msg { get; set; } = "Cuffed somebody";
   public string UsageSCP1853_Msg { get; set; } = "Used SCP-1853";
