@@ -16,6 +16,7 @@ public class XPGainEvents {
   private KillHumanAsZombieHandler killHZHandler = new();
   private KillSuicideExplosionHandler killSEHandler = new();
   private KillZombieAsHumanHandler killZHHandler = new();
+  private SCP106TeleportPDHandler scp106TeleportPDHandler = new();
 
   private UsageSCP1853Handler usageSCP1853Handler = new();
   private UsageSCP207Handler usageSCP207Handler = new();
@@ -56,6 +57,7 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(killHZHandler);
     CustomHandlersManager.RegisterEventsHandler(killSEHandler);
     CustomHandlersManager.RegisterEventsHandler(killZHHandler);
+    CustomHandlersManager.RegisterEventsHandler(scp106TeleportPDHandler);
     
     CustomHandlersManager.RegisterEventsHandler(usageSCP1853Handler);
     CustomHandlersManager.RegisterEventsHandler(usageSCP207Handler);
@@ -97,6 +99,7 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(killHZHandler);
     CustomHandlersManager.UnregisterEventsHandler(killSEHandler);
     CustomHandlersManager.UnregisterEventsHandler(killZHHandler);
+    CustomHandlersManager.UnregisterEventsHandler(scp106TeleportPDHandler);
     
     CustomHandlersManager.UnregisterEventsHandler(usageSCP1853Handler);
     CustomHandlersManager.UnregisterEventsHandler(usageSCP207Handler);
