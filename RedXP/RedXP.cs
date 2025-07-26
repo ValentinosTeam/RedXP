@@ -58,18 +58,16 @@ internal class RedXP : Plugin<Config> {
   }
 
   public override void LoadConfigs() {
-    this.TryLoadConfig("config.yml", out Config config);
-    if (config == null) {
+    if (!this.TryLoadConfig("config.yml", out Config config)) {
       Logger.Error("Failed to load config. Using default.");
-      Config = new();
-    } else
-      Config = config;
-    
-    this.TryLoadConfig("translations.yml", out Translations translations);
-    if (translations == null) {
+      config = new();
+    }
+    if (!this.TryLoadConfig("translations.yml", out Translations translations)) {
       Logger.Error("Failed to load translations. Using default.");
-      Translations = new();
-    } else
-      Translations = translations;
+      translations = new();
+    }
+
+    Config = config;
+    Translations = translations;
   }
 }
