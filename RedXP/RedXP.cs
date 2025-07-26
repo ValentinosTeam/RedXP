@@ -32,9 +32,6 @@ internal class RedXP : Plugin<Config> {
 
     Harmony.PatchAll();
 
-    if (Config == null)
-      throw new ArgumentNullException("Config");
-
     Database = new(Config.MySql_ConnectionString);
 
     CustomDataStoreManager.RegisterStore<XPDataStore>();
