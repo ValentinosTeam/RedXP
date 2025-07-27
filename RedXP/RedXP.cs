@@ -16,7 +16,7 @@ internal class RedXP : Plugin<Config> {
   public override string Name { get; }                = "RedXP";
   public override string Description { get; }         = "XP/Level plugin for the Valentinos server.";
   public override string Author { get; }              = "Team Valentinos";
-  public override Version Version { get; }            = new Version(1, 0, 0, 0);
+  public override Version Version { get; }            = new Version(1, 0, 0);
   public override Version RequiredApiVersion { get; } = new Version(LabApiProperties.CompiledVersion);
 
   public static RedXP Instance { get; private set; }
