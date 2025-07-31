@@ -1,15 +1,32 @@
 using MySqlConnector;
 using LabApi.Features.Wrappers;
+using System.Data;
+using System;
+using LabApi.Features.Console;
 
 namespace RedXP;
 
 public class Database {
-  public MySqlConnection Connection { get; private set; }
+  private MySqlConnection _connection;
+  public MySqlConnection Connection {
+    get {
+      if (_connection.State != ConnectionState.Open) {
+        try {
+          Connect();
+        } catch (Exception ex) {
+          Logger.Error($"Failed to reconnect to the database: {ex}");
+          return null;
+        }
+      }
+
+      return _connection;
+    }
+  }
 
   public bool Available { get; private set; } = false;
 
   public Database(string connectionString) {
-    Connection = new(connectionString);
+    _connection = new(connectionString);
   }
 
   public void CreateTable() {
@@ -27,14 +44,14 @@ last_xp_gain_event VARCHAR(255) NOT NULL
   }
 
   public void Connect() {
-    Connection.Open();
+    _connection.Open();
     Available = true;
     CreateTable();
   }
 
   public void Disconnect() {
     Available = false;
-    Connection.Close();
+    _connection.Close();
   }
 
   public void SavePlayers() {
