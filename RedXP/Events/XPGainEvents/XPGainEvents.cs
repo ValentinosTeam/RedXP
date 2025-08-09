@@ -90,7 +90,7 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(generatorDeactivationHandler);
 
     CustomHandlersManager.RegisterEventsHandler(createZombieHandler);
-    PatchedHandlersManager.RegisterEventsHandler(scp3114DisguiseHandler);
+    CustomHandlersManager.RegisterEventsHandler(scp3114DisguiseHandler);
     
     CustomHandlersManager.RegisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.RegisterEventsHandler(openGateHandler);
@@ -134,7 +134,7 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(generatorDeactivationHandler);
     
     CustomHandlersManager.UnregisterEventsHandler(createZombieHandler);
-    PatchedHandlersManager.UnregisterEventsHandler(scp3114DisguiseHandler);
+    CustomHandlersManager.UnregisterEventsHandler(scp3114DisguiseHandler);
     
     CustomHandlersManager.UnregisterEventsHandler(scp079LevelUpHandler);
     CustomHandlersManager.UnregisterEventsHandler(openGateHandler);

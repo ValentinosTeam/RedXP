@@ -5,6 +5,8 @@ using PlayerRoles.PlayableScps.Scp3114;
 
 namespace RedXP.Patched.Patches;
 
+// as said in SCP3114Events.cs
+// this patched event only serves as an example
 [HarmonyPatch(typeof(Scp3114Disguise), "ServerComplete")]
 class SCP3114DisguiseEventPatch {
   static void Postfix(Scp3114Disguise __instance) {
