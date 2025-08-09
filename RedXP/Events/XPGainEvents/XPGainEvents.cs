@@ -84,7 +84,7 @@ public class XPGainEvents {
     CustomHandlersManager.RegisterEventsHandler(SCPWinHandler);
 
     CustomHandlersManager.RegisterEventsHandler(warheadActivationHandler);
-    PatchedHandlersManager.RegisterEventsHandler(warheadEnabledHandler);
+    CustomHandlersManager.RegisterEventsHandler(warheadEnabledHandler);
 
     CustomHandlersManager.RegisterEventsHandler(generatorActivationHandler);
     CustomHandlersManager.RegisterEventsHandler(generatorDeactivationHandler);
@@ -128,7 +128,7 @@ public class XPGainEvents {
     CustomHandlersManager.UnregisterEventsHandler(SCPWinHandler);
 
     CustomHandlersManager.UnregisterEventsHandler(warheadActivationHandler);
-    PatchedHandlersManager.UnregisterEventsHandler(warheadEnabledHandler);
+    CustomHandlersManager.UnregisterEventsHandler(warheadEnabledHandler);
     
     CustomHandlersManager.UnregisterEventsHandler(generatorActivationHandler);
     CustomHandlersManager.UnregisterEventsHandler(generatorDeactivationHandler);

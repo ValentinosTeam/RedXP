@@ -40,7 +40,6 @@ public static class PatchedHandlersManager {
   }
 
   private static void RegisterEvents<T>(T handler, Type handlerType) where T: PatchedEventsHandler {
-    CheckEvent(handler, handlerType, nameof(PatchedEventsHandler.OnWarheadEnabled), typeof(WarheadEvents), nameof(WarheadEvents.Enabled));
     CheckEvent(handler, handlerType, nameof(PatchedEventsHandler.OnSCP3114Disguised), typeof(SCP3114Events), nameof(SCP3114Events.Disguised));
   }
 }
