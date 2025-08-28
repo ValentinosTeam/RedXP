@@ -1,6 +1,6 @@
 # WARNING: this example file is only a reference
 # for the configuration settings until a proper documentation
-# are written
+# is written
 
 x_p_gain_hint_duration: 1.5
 level_formula: 1 + 0.45 * sqrt(x)
