@@ -31,7 +31,7 @@ Download the latest GitHub release and unpack it into the LabAPI directory.
 The plugin configuration is split into `config.yml` and `translations.yml`. <br>
 `config.yml` is for most configuration options, including XP rewards. <br>
 `translations.yml` defines all the messages shown to the user. <br>
-*Only the basic configuration settings are documented.*
+*Only the basic configuration settings are documented. You can find a reference of all settings at [config.yml.example](./config.yml.example)*
 ### Database connection (required)
 Change `my_sql_connection_string` according to the template: `server=<database address>;port=<database port>;uid=<database user>;pwd=<user password>;database=<database name>`
 ### Level formula
