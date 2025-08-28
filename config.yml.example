@@ -1,0 +1,51 @@
+# WARNING: this example file is only a reference
+# for the configuration settings until a proper documentation
+# are written
+
+x_p_gain_hint_duration: 1.5
+level_formula: 1 + 0.45 * sqrt(x)
+invisitesting: true # when true disables all visual features (server-specific settings, hints and level display)
+leaderboard_n: 10 # number of people displayed in the leaderboard
+my_sql_connection_string: server=redxpdb;port=3306;uid=redxp;pwd=redxppwd;database=redxp
+activate_generator_cooldown: 90 # cooldown of xp gain ability for generator activation 
+activate_generator_max_times: 3 # maximum amount of xp gain events from activating a generator per round
+deactivate_generator_cooldown: 90 # cooldown of xp gain ability for generator deactivation
+warhead_enabled_cooldown: 90 # cooldown of xp gain ability for warhead activation
+kill_human_as_human_x_p: 5 # xp gain amount for killing a human as a human
+kill_human_as_scp_x_p: 2 # xp gain amount for killing a human as an SCP
+kill_scp_as_human_x_p: 25 # xp gain amount for killing an SCP as a human
+kill_human_as_zombie_x_p: 5 # xp gain amount for killing a human as a zombie
+kill_zombie_as_human_x_p: 5 # xp gain amount for killing a zombie as a human
+s_c_p106_teleport_p_d_x_p: 2 # xp gain amount for teleporting a player into the pocket dimension as scp 106
+suicide_kill_x_p: 10 # xp gain amount bonus for killing anyone with a candy or an explosive cola combo
+usage_s_c_p1853_x_p: 5 # xp gain amount for using SCP 1853 (green goo) 
+usage_s_c_p207_x_p: 5 # xp gain amount for drinking SCP 207 (cola)
+usage_anti_s_c_p207_x_p: 7 # xp gain amount drinking using SCP 207 (anticola)
+usage_s_c_p018_x_p: 3 # xp gain amount for throwing SCP 018 (super ball)
+usage_s_c_p2176_x_p: 5 # xp gain amount for throwing SCP 2176 (lightbulb)
+usage_s_c_p500_x_p: 3 # xp gain amount for consuming SCP 500 (panacea pills)
+usage_s_c_p268_x_p: 3 # xp gain amount for putting on SCP 268 (invisibility hat)
+usage_s_c_p1576_x_p: 3 # xp gain amount for using SCP 1576 (gramophone)
+usage_s_c_p244_x_p: 5 # xp gain amount for throwing or putting down SCP 244 (vase)
+usage_s_c_p330_x_p: 1 # xp gain amount for eating a piece of candy from SCP 330 (candy bowl) 
+usage_s_c_p1344_x_p: 5 # xp gain amount for putting on SCP 1344 (goggles)
+pickup_special_weapon_x_p: 5 # xp gain amount for picking up the microHID, the jailbird, or the disintegrator
+pickup_s_c_p127_x_p: 7 # xp gain amount for picking up SCP 127 (talking submachinegun)
+cuffed_x_p: 2 # xp gain amount for handcuffing another human
+escape_assist_x_p: 10 # xp gain amount for having another human escape while handcuffed by you
+round_presence_x_p: 3 # xp gain amount for being connected to the server for the entire round from the start to the end
+s_c_p_win_x_p: 25 # xp gain amount for winning the round as an SCP
+s_c_p_win_zombies_x_p: 5 # xp gain amount for being a zombie and winning the round as the SCP team
+s_c_p049_create_zombie_x_p: 2 # xp gain amount for resurrecting a human into a xombie as SCP 049
+s_c_p3114_disguise_x_p: 2 # xp gain for stealing a dead humans skin as SCP 3114 (the skeleton)
+escape_x_p: 10 # xp gain amount for escaping 
+s_c_p079_level_up_x_p: 5 # xp gain amount for levelling up as SCP 079 (the computer)
+activate_generator_x_p: 3 # xp gain amount for activating a generator as a human
+deactivate_generator_x_p: 5  # xp gain amount for deactivating a generator as an SCP
+open_gate_first_time_x_p: 5 # xp gain amount for opening any gate for the first time
+warhead_started_x_p: 10 # xp gain amount for activating the nuclear warhead on the surface
+warhead_enabled_x_p: 5 # xp gain amount for enabling the nuclear warhead inside the facility
+
+# only change these in case of a plugin conflict
+s_s_settings_show_x_p_gain_hints_i_d: 51413
+s_s_settings_display_level_i_d: 81712
