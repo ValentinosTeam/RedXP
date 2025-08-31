@@ -7,7 +7,7 @@ namespace RedXP.Commands;
 [CommandHandler(typeof(ClientCommandHandler))]
 public class SeeXPCommandClient : ICommand {
   public string Command       => "seexp";
-  public string[] Aliases     => [ "seelvl" ];
+  public string[] Aliases     => [ "seelvl", "xp", "lvl" ];
   public string Description   => "Shows your XP statistics";
 
   private Translations translations => RedXP.Instance.Translations;
