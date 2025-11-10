@@ -61,7 +61,7 @@ public class XPUserData {
     string nickname = null;
     int xp = 0;
     DateTime? firstXPDate = null;
-    string lastXPGainEvent = null;
+    string lastXPGainEvent = "";
 
     while (reader.Read()) {
       nickname = reader.GetString("nickname");
@@ -70,6 +70,11 @@ public class XPUserData {
          firstXPDate = reader.GetDateTime("first_xp_date");
       }
       lastXPGainEvent = reader.GetString("last_xp_gain_event");
+    }
+
+    if (lastXPGainEvent == null) {
+      // shouldn't be possible but still won't hurt
+      lastXPGainEvent = "";
     }
     
     return new XPUserData(userId, nickname, xp, firstXPDate, lastXPGainEvent, false);
